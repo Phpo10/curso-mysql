@@ -1,5 +1,4 @@
-create database projeto;
-use projeto;
+use trabalho;
 
 create table cursos (
 	id int primary key auto_increment,
@@ -7,22 +6,18 @@ create table cursos (
     horas int not null
 );
 
-drop table cursos;
-
 create table professores (
-	login int primary key not null auto_increment,
+	id int primary key not null auto_increment,
     nome varchar(50) not null,
     especialidade varchar(50)
 );
 
-drop table professores;
 
 create table alunos (
 	matricula int primary key not null auto_increment,
     nome varchar(50) not null
 );
 
-drop table alunos;
 alter table alunos auto_increment = 2025001;
 
 create table alunos_cursos(
@@ -33,10 +28,9 @@ create table alunos_cursos(
     
 );
 
-drop table alunos_cursos;
-
-
-
-
-
-
+create table professor_curso(
+	professor_id int,
+    curso_id int,
+    foreign key (professor_id) references professores(id),
+	foreign key (curso_id) references cursos(id)
+);

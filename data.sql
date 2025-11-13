@@ -9,10 +9,12 @@ values
     ("PHP Avançado e POO", 50),
 	("Lógica de Programação", 20),
     ("Python para Iniciantes", 40),
-    ("Programação Avançada em Python", 40);
-    
-    
-select * from cursos;
+    ("Programação Avançada em Python", 40),
+    ("C# Básico", 35),
+    ("C# Avançado com .NET", 55),
+    ("Arquitetura de Software", 50),
+    ("Análise de Requisitos", 30),
+    ("Documentação e Arquitetura de Sistemas", 40);    
 
 insert into alunos(nome)
 values
@@ -22,37 +24,23 @@ values
     ("Vinícius Castro"),
     ("Enzo Almeida"),
     ("Bruno Menezes"),
-    ("Marilia Mendoça"),
-    ("Dinho"),
-    ("Oruam"),
-    ("Cristiano Ronaldo");
+    ("Marilia"),
+    ("Alecsander Alves"),
+    ("Mauro Davi"),
+    ("Cristiano");
     
-    
-select * from alunos;
-
 insert into alunos_cursos(aluno_matricula, curso_id)
 values
 	(2025010, 10),
     (2025009, 8),
     (2025001, 9),
     (2025001, 10),
-    (2025002, 6);
-    
-truncate table alunos_cursos;
-	
-
-
-
-
-select aluno_matricula, a.nome, curso_id, c.nome
-from alunos_cursos as ac
-join alunos as a on ac.aluno_matricula = a.matricula
-join cursos as c on ac.curso_id = c.id
-order by aluno_matricula;
-
-
-
-	
-
-
-
+    (2025002, 6),
+    (2025003, 15),
+    (2025009, 13),
+    (2025008, 11),
+    (2025004, 4),
+    (2025004, 5),
+    (2025007, 14),
+    (2025005, 9),
+    (2025006, 1);
