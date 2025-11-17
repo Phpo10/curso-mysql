@@ -12,6 +12,7 @@ insert into professor_curso(professor_id, curso_id)
 values
 	(1, 1),
     (1, 8),
+    (1, 2),
     (2, 2),
     (2, 3),
     (3, 4),
