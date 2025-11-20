@@ -1,3 +1,4 @@
+create database trabalho;
 use trabalho;
 
 create table cursos (
